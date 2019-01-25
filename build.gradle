@@ -2,10 +2,12 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.3.11'
     id "com.github.dcendents.android-maven"  version "2.1"
+    id "java-gradle-plugin"
+    id ("com.gradle.plugin-publish") version "0.10.0"
 }
 
 group 'com.ins.gradle.plugin.android'
-version '0.1'
+version '1.0'
 
 
 
@@ -20,6 +22,25 @@ repositories {
         url 'https://maven.google.com'
     }
     mavenCentral()
+}
+
+
+pluginBundle {
+    vcsUrl = "https://github.com/jdarosTD/android-s3-plugin"
+    website = "https://github.com/jdarosTD/android-s3-plugin"
+    tags = ["android", "amazon", "aws", "s3", "storage", "app"]
+}
+
+
+gradlePlugin {
+    plugins {
+        create("S3Plugin") {
+            id = "com.ins.gradle.plugin.android.s3"
+            displayName = "Android APKs to Amazon S3 Storage"
+            description = "This plugin adds tasks for each of your app variants, allowing them to be uploaded on AWS"
+            implementationClass = "com.ins.gradle.plugin.android.s3.S3Plugin"
+        }
+    }
 }
 
 dependencies {

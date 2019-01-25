@@ -70,8 +70,7 @@ class S3Plugin : Plugin<Project> {
 
                     _log.info("Variant bType ${ appVariant.buildType.name}")
 
-                    val version = appVariant.versionName.split("-")
-                    var lKey  = "${extension.dest}/${appVariant.applicationId}_${version[0]}"
+                    var lKey  = "${extension.dest}/${appVariant.applicationId}_${ appVariant.versionName}"
                     var buildType = appVariant.buildType.name.toLowerCase()
                     if(buildType == "debug"){
                         lKey += "-$buildType"
