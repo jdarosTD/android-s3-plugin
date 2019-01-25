@@ -124,7 +124,7 @@ It is possible to apply a "split" configuration to your app to seperate the diff
 
 ```
 
-The android-s3-plugin is trying to uploading the files but the final apk full path destination does not include the screen density as it is the case in the one locally generated 
+The android-s3-plugin is trying to upload the files but the final apk full path destination does not include the screen density as it is the case in the one locally generated 
 
 Example : app-dev-xxhdpi-debug.apk locally but final is 1.0-dev-debug
 
