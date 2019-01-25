@@ -6,7 +6,7 @@ Build script snippet for plugins DSL for Gradle 2.1 and later:
 ```groovy
 
 plugins {
-  id("com.ins.gradle.plugin.android.s3") version "0.1"
+  id("com.ins.gradle.plugin.android.s3") version "1.0"
 }
 
 ```
@@ -19,7 +19,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath("gradle.plugin.com.ins.gradle.plugin.android:android-s3-plugin:0.1")
+    classpath("gradle.plugin.com.ins.gradle.plugin.android:android-s3-plugin:1.0")
   }
 }
 
