@@ -46,9 +46,6 @@ Setting the environment variables `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY
 Other properties available:
 
     bucket    - S3 bucket to use (optional, defaults to the project s3 configured bucket)
-
-    overwrite - (optional, default is false), if true the S3 object is created or overwritten if it already exists.
-
     dest      - optional path for the uploaded package 
 
 
