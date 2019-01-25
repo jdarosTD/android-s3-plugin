@@ -99,6 +99,17 @@ In addition you can decide to upload all of your variants with a single one
   uploadAllApks
 ```
 
+ ## Output Format 
+    
+    the template for the file name uploaded is :
+    
+    ${baseApplicationId}${applicationSuffix}_${baseVersion}${versionSuffix}.apk
+
+
+# NOTA BENE 
+  ## On Debug mode ONLY
+      The generated apks are overwritten on Amazon S3
+ 
 # Known Issue
 
 It is possible to apply a "split" configuration to your app to seperate the different resources.  Example :
@@ -118,6 +129,6 @@ It is possible to apply a "split" configuration to your app to seperate the diff
 
 The android-s3-plugin is trying to uploading the files but the final apk full path destination does not include the screen density as it is the case in the one locally generated 
 
-Example : app-dev-xxhdpi-debug.apk locally bug final is 1.0-dev-debug
+Example : app-dev-xxhdpi-debug.apk locally but final is 1.0-dev-debug
 
 
